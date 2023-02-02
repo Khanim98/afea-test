@@ -43,13 +43,10 @@ function App() {
        ordered = products.sort((a, b) => (a.rating > b.rating) ? 1 : -1);
       return ordered
     }
-
   }
 
-  var filteredList = useMemo(getFilteredList, [selectedCategory, products]);
+  let filteredList = useMemo(getFilteredList, [selectedCategory, products]);
 
-
-  
   return (
     
     <div className="App">
